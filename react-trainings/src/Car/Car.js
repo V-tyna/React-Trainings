@@ -4,8 +4,8 @@ function Car(props) {
     return (
         <div>
             <h3>Car name: {props.name}</h3> 
-            <p> Year: {props.year}</p>
-            {props.children}
+            <p>Year: {props.year}</p>
+            <button onClick={props.onChangeTitile}>Click</button>
         </div>
     )
 }
