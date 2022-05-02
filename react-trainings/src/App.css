@@ -1,10 +1,17 @@
 .App {
-  text-align: center;
+  display: inline-block;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.car {
+  display: flex;
+  flex-flow: wrap column;
+  align-content: center;
+  align-items: center;
+  border: 2px solid #ccc;
+  box-shadow: 2px 2px 1px grey;
+  padding: 10px;
+  margin-right: 10px;
+  width: 200px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

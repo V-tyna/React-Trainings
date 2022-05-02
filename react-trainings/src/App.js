@@ -1,24 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Car from './Car/Car.js';
 
 function App() {
+  const divStyle = {
+    textAlign: 'center'
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <div style={divStyle}>
+          <Car name={'Mersedez'} year={'2022'}> 
+          <p>Color</p>
+          </Car>
+          <Car name="Audi" year="2021"/>
+          <Car name="Tesla" year={2022}/>
+        </div>
   );
 }
 
