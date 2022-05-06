@@ -20,6 +20,24 @@ class App extends Component {
     });
   };
 
+  changeCarNameHandler = (nameFromInput, index) => {
+    const car = this.state.cars[index];
+    car.name = nameFromInput;
+    const clonedCarrsArr = [...this.state.cars];
+    clonedCarrsArr[index] = car;
+    this.setState({
+      cars: clonedCarrsArr
+    })
+  }
+
+  deleteCarHandler = (index) => {
+    const cloneCars = this.state.cars.concat();
+    cloneCars.splice(index, 1);
+    this.setState({
+      cars: cloneCars
+    })
+  }
+
   toggleCarsHandler = () => {
     this.setState({
       showCars: !this.state.showCars
@@ -35,7 +53,8 @@ class App extends Component {
 
   render() {
     const divStyle = {
-      textAlign: "center",
+      textAlign: 'center',
+      marginLeft: '10px'
     };
 
     let cars = null;
@@ -46,7 +65,8 @@ class App extends Component {
             key={index}
             name={car.name}
             year={car.year}
-            onChangeTitile={() => this.changeTitleHandler(car.name)}
+            onChangeCarName={(e) => this.changeCarNameHandler(e.target.value, index)}
+            onDeleteCar={this.deleteCarHandler.bind(this, index)}
           />
         );
       })
@@ -54,15 +74,18 @@ class App extends Component {
 
     return (
       <div style={divStyle}>
-        <h2>{this.state.pageTitle}</h2>
+        <div>
+           <h2>{this.state.pageTitle}</h2>
         <input type="text" onChange={this.handleInput} />
 
-        <button onClick={this.changeTitleHandler.bind(this, "Changed")}>
+        <button style={divStyle} onClick={this.changeTitleHandler.bind(this, "Changed")}>
           Change title
         </button>
-        <button onClick={this.toggleCarsHandler}>
+        <button style={divStyle} onClick={this.toggleCarsHandler}>
           Toggle cars
         </button>
+        </div>
+       
 
         { cars }
 
