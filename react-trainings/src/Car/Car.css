@@ -1,0 +1,34 @@
+.car-component {
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    transition: border, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.car-component:hover {
+    box-shadow: 5px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.car-input:active, .car-input:focus {
+    outline: none;
+}
+
+.car-input.green {
+    border: 2px solid rgba(50, 205, 50, 0.492);
+    border-radius: 5px;
+}
+
+.car-input.red {
+    border: 2px solid rgba(236, 60, 57, 0.583);  
+    border-radius: 5px;
+}
+
+.car-input.bold {
+    border-radius: 5px;
+    font-weight: bold;
+}
