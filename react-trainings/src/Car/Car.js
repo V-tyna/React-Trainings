@@ -1,17 +1,29 @@
 import React from 'react';
+import './Car.css';
 
 function Car(props) {
+    const inputClasses = ['car-input'];
+
+    if(props.name !== '') {
+        inputClasses.push('green');
+    } else {
+        inputClasses.push('red');
+    }
+
+    if(props.name.length > 5) {
+        inputClasses.push('bold');
+    }
+
     return (
-        <div style={{
-            border: '1px solid #ccc',
-            marginTop: '10px',
-            display: 'inline-block',
-            padding: '10px',
-            margin: '10px'
-        }}>
+        <div className="car-component">
             <h3>Car name: {props.name}</h3> 
             <p>Year: {props.year}</p>
-            <input type="text" onChange={props.onChangeCarName} value={props.name}/>
+            <input 
+                type="text" 
+                onChange={props.onChangeCarName} 
+                value={props.name}
+                className={inputClasses.join(' ')}
+            />
             <button style={{
                 marginLeft: '10px'
             }} type='button' onClick={props.onDeleteCar}>Delete</button>

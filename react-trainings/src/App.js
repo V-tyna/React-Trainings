@@ -86,7 +86,6 @@ class App extends Component {
         </button>
         </div>
        
-
         { cars }
 
       </div>
