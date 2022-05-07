@@ -1,9 +1,10 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import "./App.css";
 import Car from "./Car/Car.js";
 import ErrorBoundary from "./ErrorBoundary/ErrorBoundary";
 import Counter from "./Counter/Counter";
 
+export const ClickedContext = React.createContext(false);
 class App extends Component {
 
   constructor(props) {
@@ -17,7 +18,8 @@ class App extends Component {
       { name: "Tesla", year: 2022 },
     ],
     pageTitle: "React components",
-    showCars: false
+    showCars: false,
+    clicked: false
   };
   }
 
@@ -73,6 +75,7 @@ class App extends Component {
           <Car
             name={car.name}
             year={car.year}
+            index={index}
             onChangeCarName={(e) => this.changeCarNameHandler(e.target.value, index)}
             onDeleteCar={this.deleteCarHandler.bind(this, index)}
           />
@@ -94,9 +97,13 @@ class App extends Component {
         <button style={divStyle} onClick={this.toggleCarsHandler}>
           Toggle cars
         </button>
+
+        <button className="app-button" onClick={() => this.setState({clicked: true})}>Change clicked</button>
         </div>
-       
-        <Counter />
+       <ClickedContext.Provider value={this.state.clicked}>
+         <Counter />
+       </ClickedContext.Provider>
+        
 
         { cars }
 

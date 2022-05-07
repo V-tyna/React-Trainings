@@ -1,15 +1,23 @@
 import React from "react";
 import "./Car.css";
 import withClass from "../HOC/withClass";
+import PropTypes from 'prop-types';
+
 class Car extends React.Component {
 
-    shouldComponentUpdate(nextProps, nextState) {
-        console.log('SHOULD UPDATE', 'Next props: ', nextProps, 'Next state:', nextState);
+    constructor(props) {
+        super(props);
+        this.inputRef = React.createRef();
+    }
+
+    shouldComponentUpdate(nextProps) {
         return nextProps.name.trim() !== this.props.name
     }
  
-    componentDidUpdate() {
-        console.log('Did update');
+    componentDidMount() {
+        if(this.props.index === 0) {
+            this.inputRef.current.focus();
+        }   
     }
 
     componentWillUnmount() {
@@ -34,6 +42,7 @@ class Car extends React.Component {
             <h3>Car name: {this.props.name}</h3>
             <p>Year: {this.props.year}</p>
             <input
+            ref = {this.inputRef}
             type="text"
             onChange={this.props.onChangeCarName}
             value={this.props.name}
@@ -43,6 +52,14 @@ class Car extends React.Component {
         </React.Fragment>
         );
   }
+}
+
+Car.propTypes = {
+    name: PropTypes.string.isRequired,
+    year: PropTypes.number,
+    index: PropTypes.number,
+    onChangeCarName: PropTypes.func,
+    onDeleteCar: PropTypes.func
 }
 
 export default withClass(Car, 'car-component');
