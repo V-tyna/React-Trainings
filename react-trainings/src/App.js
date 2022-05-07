@@ -1,9 +1,15 @@
 import { Component } from "react";
 import "./App.css";
 import Car from "./Car/Car.js";
+import ErrorBoundary from "./ErrorBoundary/ErrorBoundary";
 
 class App extends Component {
-  state = {
+
+  constructor(props) {
+    console.log('App constructor');
+    super(props)
+    
+    this.state = {
     cars: [
       { name: "Mersedez", year: 2020 },
       { name: "Audi", year: 2021 },
@@ -12,6 +18,7 @@ class App extends Component {
     pageTitle: "React components",
     showCars: false
   };
+  }
 
   changeTitleHandler = (newTitle) => {
     console.log('Car title click');
@@ -61,13 +68,14 @@ class App extends Component {
     if(this.state.showCars) {
       cars = this.state.cars.map((car, index) => {
         return (
+          <ErrorBoundary key={index}>
           <Car
-            key={index}
             name={car.name}
             year={car.year}
             onChangeCarName={(e) => this.changeCarNameHandler(e.target.value, index)}
             onDeleteCar={this.deleteCarHandler.bind(this, index)}
           />
+          </ErrorBoundary>
         );
       })
     } 
@@ -76,6 +84,7 @@ class App extends Component {
       <div style={divStyle}>
         <div>
            <h2>{this.state.pageTitle}</h2>
+           <h2>{this.props.title}</h2>
         <input type="text" onChange={this.handleInput} />
 
         <button style={divStyle} onClick={this.changeTitleHandler.bind(this, "Changed")}>
