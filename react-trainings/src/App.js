@@ -2,6 +2,7 @@ import { Component } from "react";
 import "./App.css";
 import Car from "./Car/Car.js";
 import ErrorBoundary from "./ErrorBoundary/ErrorBoundary";
+import Counter from "./Counter/Counter";
 
 class App extends Component {
 
@@ -95,6 +96,8 @@ class App extends Component {
         </button>
         </div>
        
+        <Counter />
+
         { cars }
 
       </div>

@@ -1,6 +1,6 @@
-import React from 'react';
-import './Car.css';
-
+import React from "react";
+import "./Car.css";
+import withClass from "../HOC/withClass";
 class Car extends React.Component {
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -30,7 +30,7 @@ class Car extends React.Component {
         }
 
         return (
-        <div className="car-component">
+        <React.Fragment>
             <h3>Car name: {this.props.name}</h3>
             <p>Year: {this.props.year}</p>
             <input
@@ -39,18 +39,10 @@ class Car extends React.Component {
             value={this.props.name}
             className={inputClasses.join(" ")}
             />
-            <button
-            style={{
-                marginLeft: "10px",
-            }}
-            type="button"
-            onClick={this.props.onDeleteCar}
-            >
-            Delete
-            </button>
-        </div>
+            <button className="car-btn" type="button" onClick={this.props.onDeleteCar}> Delete </button>
+        </React.Fragment>
         );
   }
 }
 
-export default Car;
+export default withClass(Car, 'car-component');
