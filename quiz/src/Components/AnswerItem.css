@@ -12,3 +12,11 @@
     background: rgb(86, 245, 74);
     transition: background 0.3s ease-in-out;
 }
+
+.AnswerItem.success {
+    background: rgba(6, 180, 3, 0.684);
+}
+
+.AnswerItem.failure {
+    background: rgba(248, 69, 72, 0.664);
+}

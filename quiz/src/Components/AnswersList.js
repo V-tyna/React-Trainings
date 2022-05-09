@@ -12,6 +12,7 @@ class AnswersList extends React.Component {
                         key={index}
                         answer={answ} 
                         onAnswerClick={this.props.onAnswerClick}
+                        answerState={this.props.answerState ? this.props.answerState[answ.id] : null} 
                         />
                     )
               })}
