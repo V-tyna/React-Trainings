@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './UI/Button';
 import './FinishedQuiz.css';
 
 const FinishedQuiz = (props) => {
@@ -29,9 +30,12 @@ const FinishedQuiz = (props) => {
 
              <h4>Right answers: {successCount} of {props.quiz.length}</h4>
 
-             <button onClick={props.onRetry}>
+             <Button onClick={props.onRetry} type="primary">
                  Repeat quiz
-             </button>
+             </Button>
+             <Button type="success">
+                 Go to quiz list
+             </Button>
         </div>
     )
 }

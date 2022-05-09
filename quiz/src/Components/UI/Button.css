@@ -1,0 +1,38 @@
+.Button {
+    background: rgba(150, 250, 143, 0.704);
+    border: 1px solid rgb(53, 40, 40);
+    border-radius: 5px;
+    padding: 10px;
+    display: inline-block;
+    margin-right: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.Button:focus {
+    outline: none;
+}
+
+.Button:active {
+    box-shadow: inset 2px 2px 1px rgba(211, 211, 211, 0.657);
+}
+
+.Button:disabled {
+    background: #ccc;
+    color: rgb(53, 40, 40);
+    cursor: not-allowed;
+}
+
+.failure {
+    background: rgba(248, 69, 72, 0.893);
+}
+
+.success {
+    background: rgba(17, 193, 14, 0.79);
+}
+
+.primary {
+    background: rgba(150, 250, 143, 0.704);
+    color: rgb(53, 40, 40);
+}
