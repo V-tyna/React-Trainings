@@ -29,8 +29,7 @@ class Drawer extends React.Component {
                     </ul>
                 </nav>
                {this.props.isOpen ? <Backdrop onClick={this.props.onCloseDrawer}/> : null} 
-            </React.Fragment>
-           
+            </React.Fragment>         
         )
     }
 }
