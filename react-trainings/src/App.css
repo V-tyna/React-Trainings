@@ -47,3 +47,13 @@
 .app-button {
   margin-left: 10px;
 }
+
+.nav {
+  text-align: center;
+}
+
+.link-on-page {
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 40px;
+}
