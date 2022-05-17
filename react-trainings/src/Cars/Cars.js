@@ -1,7 +1,9 @@
 import React from "react";
 import Car from "../Car/Car";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
-import "./Cars.css"
+import "./Cars.css";
+
+
 
 class Cars extends React.Component {
     constructor(props) {
@@ -47,12 +49,13 @@ class Cars extends React.Component {
                 </ErrorBoundary>
             );
           })
-       return (
-         <div>
-             { cars }
-             <button className="button-back-home" type="text" onClick={() => window.location.pathname = '/'}>Back to home page</button>
-         </div>
-          )
+
+        return (
+            <div>
+                { cars }
+                <button className="button-back-home" type="text" onClick={() => window.location.pathname = '/'}>Back to home page</button>
+            </div>
+        )
     
     }  
     

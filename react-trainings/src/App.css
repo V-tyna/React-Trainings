@@ -55,5 +55,10 @@
 .link-on-page {
   text-decoration: none;
   cursor: pointer;
-  margin-left: 40px;
+  margin-left: 40px; 
+}
+
+nav.nav .active {
+  color: limegreen;
+  font-weight: bold;
 }

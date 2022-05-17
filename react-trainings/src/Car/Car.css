@@ -36,3 +36,19 @@
 .car-btn {
     margin-left: 10px;
 }
+
+.detail-car-link {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    display: block;
+    border: 1ps solid lightgrey;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(240, 255, 242);
+}
+
+.detail-car-link:hover {
+    background-color: rgb(175, 249, 185);
+}

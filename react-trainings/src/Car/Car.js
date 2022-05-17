@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Car.css";
 import withClass from "../HOC/withClass";
 import PropTypes from 'prop-types';
@@ -25,6 +26,7 @@ class Car extends React.Component {
     }
 
     render() {
+        console.log(this.props);
         const inputClasses = ["car-input"];
 
         if (this.props.name !== '') {
@@ -49,6 +51,7 @@ class Car extends React.Component {
             className={inputClasses.join(" ")}
             />
             <button className="car-btn" type="button" onClick={this.props.onDeleteCar}> Delete </button>
+            <Link className="detail-car-link" to={`/cars/${this.props.name}`}> Go to details </Link>
         </React.Fragment>
         );
   }

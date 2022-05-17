@@ -10,6 +10,11 @@ class Home extends Component {
     super(props)
     
     this.state = {
+      cars: [
+      { name: "Mersedez", year: 2020 },
+      { name: "Audi", year: 2021 },
+      { name: "Tesla", year: 2022 },
+      ],
       pageTitle: "React components",
       showCars: false,
       clicked: false
@@ -29,7 +34,6 @@ class Home extends Component {
   }
 
   handleInput = (e) => {
-    console.log("Input", e.target.value);
     this.setState({
       pageTitle: e.target.value,
     });
