@@ -67,7 +67,7 @@ class Home extends Component {
          <Counter />
        </ClickedContext.Provider>
         
-        {this.state.showCars ? <Cars /> : null}
+        {this.state.showCars ? <Cars showCars={this.state.showCars}/> : null}
 
       </div>
     );

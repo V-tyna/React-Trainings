@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Car from "../Car/Car";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import "./Cars.css";
@@ -52,8 +53,10 @@ class Cars extends React.Component {
 
         return (
             <div>
-                { cars }
-                <button className="button-back-home" type="text" onClick={() => window.location.pathname = '/'}>Back to home page</button>
+              <div className="cars-component">
+                 { cars }
+              </div>
+                { !this.props.showCars ? <Link className="link-home-page" to='/'>Home page</Link> : null}
             </div>
         )
     

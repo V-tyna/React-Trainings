@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function About() {
     return(
         <div>
             <h2>Page about</h2>
-            <button type="text" onClick={() => window.location.pathname = '/'}>Back to home page</button>
+            <Link className="link-home-page" to='/'>Home page</Link>
         </div>
     )
 }

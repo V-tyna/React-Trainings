@@ -62,3 +62,19 @@ nav.nav .active {
   color: limegreen;
   font-weight: bold;
 }
+
+.link-home-page{
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  display: block;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(240, 255, 242);
+  width: 100px;
+  margin: auto;
+}
+
+.link-home-page:hover {
+  background-color: rgb(175, 249, 185);
+}

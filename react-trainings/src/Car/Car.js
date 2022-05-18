@@ -26,7 +26,6 @@ class Car extends React.Component {
     }
 
     render() {
-        console.log(this.props);
         const inputClasses = ["car-input"];
 
         if (this.props.name !== '') {
