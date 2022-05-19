@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Car.css";
-import withClass from "../HOC/withClass";
+import withClass from "../../HOC/withClass";
 import PropTypes from 'prop-types';
 
 class Car extends React.Component {

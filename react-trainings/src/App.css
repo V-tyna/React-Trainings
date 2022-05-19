@@ -50,15 +50,30 @@
 
 .nav {
   text-align: center;
+  background-color: #282c34;
+  height: 75px;
+  min-width: 100%;
 }
 
 .link-on-page {
   text-decoration: none;
   cursor: pointer;
-  margin-left: 40px; 
+  margin: 100px; 
+  color: white;
 }
 
-nav.nav .active {
+.link-on-page:hover {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav.nav .active-link {
   color: limegreen;
   font-weight: bold;
 }
