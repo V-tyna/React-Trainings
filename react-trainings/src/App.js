@@ -32,8 +32,8 @@ function App() {
         <NavLink className={setActiveLink} to="/">Home</NavLink>
         <NavLink className={setActiveLink} to="/about">About</NavLink>
         <NavLink className={setActiveLink} to={{ pathname: "/cars" }}>Cars</NavLink>
-        <button onClick={logInHandle}>Log In</button>
-        <button onClick={logOutHandle}>Log Out</button>
+        <button className="btn-log" onClick={logInHandle}>Log In</button>
+        <button className="btn-log" onClick={logOutHandle}>Log Out</button>
       </nav>
 
       <Routes>
