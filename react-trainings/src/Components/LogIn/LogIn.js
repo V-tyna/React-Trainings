@@ -1,14 +1,12 @@
 import React from "react";
-import Cars from "../Cars/Cars";
 import "./LogIn.css";
 
-function LogIn() {
-    return(
+function LogIn(props) {
+    return (
         <div>
             <h1>Log In Page</h1>
-            <button onClick={() => <Cars />}>Click</button>
         </div>
-    )
+        )    
 }
 
 export default LogIn;
