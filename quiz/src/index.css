@@ -11,3 +11,49 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.quiz-component {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  flex-grow: 1;
+  width: 100%; 
+  background: linear-gradient(#8ff7ab, #9198e5);
+}
+
+.quiz-component a {
+  text-decoration: none;
+  color: rgb(60, 60, 60)
+}
+
+.quiz-component a:hover {
+  color: white;
+}
+
+.quiz-component ul {
+  list-style: none;
+}
+
+.auth {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.auth-form {
+  margin: 10px;
+  width: 500px;
+}
+
+.auth-form input {
+  margin: 10px;
+  height: 30px;
+  width: 500px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.auth-form button {
+  margin: 10px;
+  width: 85px;
+}

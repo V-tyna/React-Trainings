@@ -36,3 +36,22 @@
     background: rgba(150, 250, 143, 0.704);
     color: rgb(53, 40, 40);
 }
+
+.primary:enabled:hover {
+    background: rgba(42, 246, 39, 0.79);
+    cursor: pointer;
+}
+
+.success:enabled:hover {
+    background: rgba(94, 243, 83, 0.75);
+    color: rgb(53, 40, 40); 
+    cursor: pointer;
+}
+
+.primary:disabled:hover {
+    cursor: no-drop;
+}
+
+.success:disabled:hover {
+    cursor: no-drop;
+}

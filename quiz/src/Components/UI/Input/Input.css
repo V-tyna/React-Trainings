@@ -1,0 +1,34 @@
+.Input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.Input label {
+    margin-bottom: 3px;
+    padding: 0;
+    display: block;
+    font-weight: bold;
+}
+
+.Input input {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 7px;
+    margin: 0 0 5px;
+    width: 500px;
+    outline: none;
+    transition: all 300ms ease-in-out;
+}
+
+.Input span {
+    color: rgb(195, 83, 83);
+}
+
+.Input.invalid label {
+    color: rgb(195, 83, 83);
+}
